@@ -1,7 +1,8 @@
 <?php
 require("dbconnect.php");
-$sid = $_POST['sid'];
+session_start();
 
+$sid = $_POST['sid'];
 $sid = mysqli_real_escape_string($conn,$sid);
 $sql = "SELECT `level`, `sid` FROM `1062` WHERE `sid`='$sid'";
 ?>
